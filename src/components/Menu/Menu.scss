@@ -1,0 +1,41 @@
+@import "../../global.scss";
+
+.menu {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 300px;
+    height: calc(100vh - 70px);
+    background-color: $mainColor;
+    color: white;
+    z-index: 4;
+    transition: 1s ease;
+    
+    ul {
+        height: 100%;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 20px 30px;
+        cursor: pointer;
+        
+        li {
+            margin-bottom: 15px;
+            
+            a {
+                font-size: 20px;
+                text-decoration: none;
+                color: white;
+                transition: 1s ease;
+                font-family: Verdana;
+            }
+            a:hover {
+                font-weight: 900px;
+            }
+        }
+    }
+    
+    &.disable {
+        right: -400px;
+    }
+}

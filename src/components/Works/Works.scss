@@ -1,0 +1,140 @@
+@import "../../global.scss";
+
+.works {
+    background-color: $mainColor;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .slider {
+        height: 400px;
+        position: absolute;
+        left: 0vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: 0.5s ease-out;
+
+        .container {
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: scroll;
+
+            .item {
+                width: 85%;
+                height: 100%;
+                border-radius: 20px;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .left {
+                    flex: 40%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .leftContainer {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        padding: 30px 10px;
+                        font-size: 16px;
+
+                        .imgContainer {
+
+                            img {
+                                margin: 30px 0px 10px;
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 50%;
+                                object-fit: cover;
+                            }
+                        }
+                        h2 {
+                            font-size: 20px;
+                            margin-bottom: 10px;
+                        }
+                        .project-link {
+                            margin: 15px 0 0;
+                            max-width: 100px;
+
+                            h3 {
+                                font-size: 18px;
+                                padding: 10px 15px;
+                                text-align: center;
+                                background-color: $mainColor;
+                                color: white;
+                                border-left: none;
+                                border-radius: 10px;
+                                transition: all 1s ease-in;
+                                font-size: 20px;
+
+                                &:hover {
+                                    background-color: white;
+                                    color: $mainColor;
+                                    border: 1px solid $mainColor;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    flex: 60%;
+                    height: 100%;
+                    overflow: hidden;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+    .controllers {
+        z-index: 4;
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        
+        .previous {
+            margin: 0;
+            padding: 10px 12px;
+            border: 1px solid $mainColor;
+            border-radius: 10px;
+            background-color: white;
+            color: $mainColor;
+            transition: 1s ease-out;
+            
+            &:hover {
+                font-weight: 900;
+            }
+        }
+        
+            .next {
+            margin: 0;
+            padding: 10px 12px;
+            border: 1px solid $mainColor;
+            border-radius: 10px;
+            background-color: white;
+            color: $mainColor;
+            transition: 1s ease-out;
+            
+                &:hover {
+                    font-weight: 900;
+                }
+            }
+        }
+}
